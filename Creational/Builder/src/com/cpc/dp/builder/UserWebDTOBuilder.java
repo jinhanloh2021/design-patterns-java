@@ -9,7 +9,7 @@ public class UserWebDTOBuilder implements UserDTOBuilder {
     private String lname;
     private String age;
     private String address;
-    private UserWebDTO dto;
+    private UserWebDTO dto; // what we want to build
 
     @Override
     public UserDTO build() {
@@ -35,7 +35,7 @@ public class UserWebDTOBuilder implements UserDTOBuilder {
     public UserDTOBuilder withBirthday(LocalDate date) {
         Period ageInYears = Period.between(date, LocalDate.now());
         this.age = Integer.toString(ageInYears.getYears());
-        return this;
+        return this; // always return this to do method chaining.
     }
 
     @Override
