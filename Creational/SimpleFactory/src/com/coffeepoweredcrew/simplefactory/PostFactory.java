@@ -6,14 +6,20 @@ package com.coffeepoweredcrew.simplefactory;
  *
  */
 public class PostFactory {
+    // User enum to prevent string checking. Less error prone.
+    public enum PostType {
+        BLOG,
+        NEWS,
+        PRODUCT,
+    }
 
-    public static Post createPost(String type) {
+    public static Post createPost(PostType type) {
         switch (type) {
-            case "blog":
+            case BLOG:
                 return new BlogPost();
-            case "news":
+            case NEWS:
                 return new NewsPost();
-            case "product":
+            case PRODUCT:
                 return new ProductPost();
             default:
                 throw new IllegalArgumentException("Post type unknown");
