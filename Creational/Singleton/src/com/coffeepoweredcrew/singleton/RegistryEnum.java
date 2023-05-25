@@ -6,6 +6,12 @@ package com.coffeepoweredcrew.singleton;
  * using java's in-built
  * mechanism and still ensure single instance
  */
-public enum RegistryEnum {
 
+// Enums are not extendable, cannot create an object of enum.
+// Handles serialisation and de-serialisation issues
+public enum RegistryEnum {
+    INSTANCE;
+
+    public void getConfiguration() {
+    }
 }
