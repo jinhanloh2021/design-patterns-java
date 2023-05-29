@@ -9,8 +9,14 @@ public class Main {
         BusinessCardDesigner designer = new BusinessCardDesigner();
         String card = designer.designCard(adapter);
         System.out.println(card);
-        /** Using Object Adapter **/
 
+        /** Using Object Adapter **/
+        System.out.println("*************************************");
+        Employee employee = new Employee();
+        populateEmployeeData(employee);
+        EmployeeObjectAdapter objectAdapter = new EmployeeObjectAdapter(employee);
+        card = designer.designCard(objectAdapter);
+        System.out.println(card);
     }
 
     private static void populateEmployeeData(Employee employee) {
