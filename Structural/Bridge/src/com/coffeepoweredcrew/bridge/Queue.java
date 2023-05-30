@@ -1,8 +1,8 @@
 package com.coffeepoweredcrew.bridge;
 
-//A refined abstraction.
+//A refined abstraction, implements FifoCollection, concrete class
 public class Queue<T> implements FifoCollection<T> {
-    private LinkedList<T> list;
+    private LinkedList<T> list; // bridges to LinkedList, which is an interface
 
     public Queue(LinkedList<T> list) {
         this.list = list;

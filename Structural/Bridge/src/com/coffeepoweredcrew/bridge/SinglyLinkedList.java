@@ -1,10 +1,9 @@
 package com.coffeepoweredcrew.bridge;
 
-//A concrete implementor. 
+//A concrete implementer
 //This implementation is a classic LinkedList using nodes
 //**NOT thread safe**
 public class SinglyLinkedList<T> implements LinkedList<T> {
-
     private class Node {
         private Object data;
         private Node next;
